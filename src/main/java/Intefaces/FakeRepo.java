@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import static javax.swing.UIManager.put;
 
@@ -30,16 +29,13 @@ public class FakeRepo implements FakeRepoInterface{
     }
 
     @Override
-    public Optional findUserById(long id) {
+    public void findUserById(long id) {
         database.get((int) id);
-        return findUserById(id);
     }
 
     @Override
-    public String deleteUser(long id) {
+    public void deleteUser(long id) {
         database.remove(id);
-
-        return null;
     }
 
 }
