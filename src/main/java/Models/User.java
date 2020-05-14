@@ -1,6 +1,7 @@
 package Models;
 
 public class User {
+
     private long Id;
     private String name;
     private String surname;
@@ -11,27 +12,35 @@ public class User {
         this.surname = surname;
     }
 
-    public User(){}
+    public User(){
 
-
-    //setter
-    public void setId(long id) {Id = id; }
-
-    public void setName(String name) {this.name = name;
-    }
-    public void setSurname(String surname) {this.surname = surname;
     }
 
-    //getter
+
     public long getId() {
         return Id;
+    }
+
+    public void setId(long id) {
+        Id = id;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getSurname() {
         return surname;
     }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+
+
 }
