@@ -2,11 +2,11 @@ package Intefaces;
 
 public interface FakeRepoInterface {
 
-    void insertUser(long id,String name,String surname);
+    String insertUser(long id,String name,String surname);
 
-    void findUserById(long id);
+    String findUserById(long id);
 
-    void deleteUser(long id);
+    String deleteUser(long id);
 
 
 }

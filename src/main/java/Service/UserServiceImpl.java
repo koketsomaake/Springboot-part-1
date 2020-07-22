@@ -1,7 +1,7 @@
 package Service;
 
-import Intefaces.FakeRepoInterface;
-import Service.UserService;
+import Intefaces.FakeRepo;
+import Models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,27 +10,24 @@ public class UserServiceImpl implements UserService {
 
 
     @Autowired
-    private FakeRepoInterface fakeRepoInterface;
+    private final FakeRepo fakeRepo ;
 
-
-    public UserServiceImpl(FakeRepoInterface fakeRepoInterface) {
-        this.fakeRepoInterface = fakeRepoInterface;
+    public UserServiceImpl(FakeRepo fakeRepo) {
+        this.fakeRepo = fakeRepo;
     }
-
-
     @Override
-    public void addUser(long id, String name, String surname) {
-        fakeRepoInterface.insertUser(id,name,surname);
+    public String addUser(long id, String name, String surname) {
+        fakeRepo.insertUser(id,name,surname);
+        return User.getName("KTSTHEDJ ") + "ENTERED";
     }
-
     @Override
-    public void removeUser(long id) {
-        fakeRepoInterface.deleteUser(id);
-
+    public String removeUser(long id) {
+        fakeRepo.deleteUser(id);
+        return User.getName("KTsTHEdj ") + "removed";
     }
-
     @Override
-    public void getUser(long id) {
-        fakeRepoInterface.findUserById(id);
+    public String getUser(long id) {
+        fakeRepo.findUserById(id);
+        return "Hello " + User.getName("ktsthedj");
     }
 }

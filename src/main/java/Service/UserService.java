@@ -1,9 +1,9 @@
 package Service;
 
 public interface UserService {
-    void addUser(long id ,String name,String surname);
+    String addUser(long id ,String name,String surname);
 
-    void removeUser(long id);
+    String removeUser(long id);
 
-    void getUser(long id);
+    String getUser(long id);
 }

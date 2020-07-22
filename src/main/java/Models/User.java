@@ -16,6 +16,15 @@ public class User {
 
     }
 
+    public static String getName(String name) {
+        return name;
+    }
+
+    public static String getSurname(String surname) {
+        return surname;
+    }
+
+
 
     public long getId() {
         return Id;
@@ -25,16 +34,15 @@ public class User {
         Id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+
 
     public void setName(String name) {
         this.name = name;
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
+
     }
 
     public void setSurname(String surname) {
